@@ -32,7 +32,7 @@ app.get('/login', async (req, res) => {
         mot_de_passe: req.body.mot_de_passe
       }).select('*');
 
-    if(!isAccount) {
+    if(isAccount.length === 0) {
         res.status(404).send('Account not found !')
     } else {
         res.status(200).send('Welcome to your account !');
