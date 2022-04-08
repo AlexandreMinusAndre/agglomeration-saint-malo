@@ -12,7 +12,7 @@ const bonPlan = require('../routes/post');
 
 app.use('/createAccount', createAccount);
 app.use('/login', login);
-app.use('/bonPlan', bonPlan);
+app.use('/bonPlans', bonPlan);
 
 
 app.listen(PORT, ()=> {console.log(`Server listenning on PORT : ${PORT}`)});

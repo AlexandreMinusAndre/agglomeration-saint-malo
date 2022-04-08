@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.post("/bonPlans", async (req, res) => {
+router.post("/", async (req, res) => {
     const bonPlan = require('../models/post');
 
     await bonPlan({
