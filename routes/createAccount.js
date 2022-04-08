@@ -8,7 +8,7 @@ router.post('/', async (req, res) => {
     await newAccount({
         "nom": req.body.nom,
         "prenom": req.body.prenom,
-        "mot_de_passe": crypto.createHash('sha256').update(req.body.mot_de_passe),
+        "mot_de_passe": crypto.createHash('sha256').update(req.body.mot_de_passe).digest('hex'),
         "email": req.body.email,
         "groupe": req.body.groupe,
         "ecole": req.body.ecole,
