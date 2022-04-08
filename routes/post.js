@@ -8,6 +8,7 @@ router.post("/", async (req, res) => {
         "title": req.body.title,
         "date_de_post": req.body.date_de_post,
         "categorie": req.body.categorie,
+        "description": req.body.description,
         "author_id": req.body.author_id
     })
 

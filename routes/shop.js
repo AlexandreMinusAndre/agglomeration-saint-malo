@@ -6,7 +6,7 @@ router.post("/", async (req, res) => {
 
     await createShop({
         "nom": req.body.nom,
-        "siret": req.body.siret,
+        "ciret": req.body.ciret,
         "categorie": req.body.categorie,
         "addresse": req.body.addresse,
         "ville": req.body.ville,
