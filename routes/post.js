@@ -1,6 +1,15 @@
+const express = require('express');
+const router = express.Router();
 
+router.post("/bonPlans", async (req, res) => {
+    const bonPlan = require('../models/post');
 
-app.post("/bonPlans", async (req, res) => {
+    await bonPlan({
+        "title": req.body.title,
+        "date_de_post": req.body.date_de_post,
+        "categorie": req.body.categorie,
+        "author_id": req.body.author_id
+    })
 
     try {
         res.send('Annonce créée !');
@@ -8,3 +17,6 @@ app.post("/bonPlans", async (req, res) => {
         console.log(err.message);
     }
 });
+
+
+module.exports = router;
