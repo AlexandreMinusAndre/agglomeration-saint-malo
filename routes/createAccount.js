@@ -4,18 +4,18 @@ const crypto = require('crypto');
 
 router.post('/', async (req, res) => {
     const { newAccount } = require('../models/account')
-
+    console.log(req.body);
     await newAccount({
-        "nom": req.body.nom,
-        "prenom": req.body.prenom,
-        "mot_de_passe": crypto.createHash('sha256').update(req.body.mot_de_passe).digest('hex'),
+        "lastname": req.body.lastname,
+        "firstname": req.body.firstname,
+        "password": crypto.createHash('sha256').update(req.body.password).digest('hex'),
         "email": req.body.email,
-        "groupe": req.body.groupe,
-        "ecole": req.body.ecole,
-        "numero_de_telephone": req.body.numero_de_telephone,
-        "pays": req.body.pays,
-        "ville": req.body.ville,
-        "code_postal": req.body.code_postal,
+        "member_group": req.body.member_group,
+        "school": req.body.school,
+        "phone": req.body.phone,
+        "adresse": req.body.adresse,
+        "city": req.body.city,
+        "zipcode": req.body.zipcode,
         "rgpd": req.body.rgpd
     });
 

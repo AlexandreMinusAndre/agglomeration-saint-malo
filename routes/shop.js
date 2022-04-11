@@ -5,13 +5,14 @@ router.post("/", async (req, res) => {
     const createShop = require('../models/shop');
 
     await createShop({
-        "nom": req.body.nom,
-        "ciret": req.body.ciret,
-        "categorie": req.body.categorie,
-        "addresse": req.body.addresse,
-        "ville": req.body.ville,
-        "pays": req.body.pays,
-        "owner_id": req.body.owner_id
+        "asso": req.body.asso,
+        "cate_asso": req.body.cate_asso,
+        "type": req.body.type,
+        "adresse": req.body.adresse,
+        "city": req.body.city,
+        "owner_id": req.body.owner_id,
+        "zipcode": req.body.zipcode,
+        "phone": req.body.phone,
     })
 
     try {
