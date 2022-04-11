@@ -1,0 +1,97 @@
+.homepage-top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepage-top > img {
+    width: 100%;
+}
+
+.top-content {
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+}
+
+.top-content h1,
+.top-content p {
+    width: 100%;
+    min-width: 5rem;
+    color: var(--white);
+}
+
+.top-content h1 {
+    font-family: 'Chicle', cursive;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2.4rem;
+}
+
+.top-content img {
+    width: 100%;
+    max-width: 350px;
+}
+
+
+.top-content .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin: 7rem auto;
+}
+.plankton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 950px) {
+    .top-content h1 {
+        font-size: 2rem;
+    }
+    .top-content .text {
+        margin: 3rem auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .top-content .plankton {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .top-content .plankton {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .top-content h1 {
+        width: 100%;
+        font-size: 1.7rem;
+    }
+    .top-content p {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    .top-content {
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .top-content {
+        display: none;
+    }
+}

@@ -1,0 +1,93 @@
+.wrapper_alimentaire{
+    min-height: 250px;
+    height: 25%;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.border_and_title{
+    display: flex;
+    margin-top: 2%;
+}
+
+.border{
+    border-left: 5px solid var(--light-red);
+    margin-right: 2%;
+}
+
+.title_alimentaire{
+    font-size: 78px;
+    color: yellow;
+    text-transform: uppercase;
+    font-family: Chicle, cursive;
+    letter-spacing: 5px;
+}
+
+.svg_and_text{
+    flex-direction: column;
+    display: flex;
+}
+
+.svg_assiette{
+    z-index: 150;
+    margin-top: -3%;
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.text_wrapper{
+    color: var(--light-red);
+    text-align: center;
+    margin-bottom: 2%;
+    margin-right: 15%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.box_for_search{
+    width: 97%;
+    height: 175px;
+    margin: auto;
+    background-color: var(--light-red);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.right_part_top_search{
+    width: 65%;
+    height: 100%;
+    margin-left: auto;
+    display: flex;
+}
+
+.style_bottom_box_for_search{
+    height: 25%;
+    background-color: #FBD700;
+}
+
+.box_contain_searchbar{
+    width: 95%;
+    height: 40px;
+    justify-content: flex-end;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+}
+
+.filter_btn_search{
+    background-color: #FBD700;
+    border: none;
+    padding: 5px 15px;
+    font-family: 'Inika', serif;
+}
+
+.searchbar_input{
+    font-family: 'Inika', serif;
+    margin-right: 2%;
+    width: 40%;
+}
+
+.loupe_icon{
+    vertical-align: -webkit-baseline-middle;
+}

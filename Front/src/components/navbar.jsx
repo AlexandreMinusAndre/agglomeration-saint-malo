@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Connect from "./Connect";
+import logo from '../images/log.png';
 import '../Style/navbar.css';
 
-function useOutsideAlerter(ref, setCheck, isActive) {
+function useOutsideAlerter(ref, form, setCheck, isActive) {
   useEffect(
     () => {
       function handleClickOutside(event) {
-        if (ref.current && !ref.current.contains(event.target)){
+        if (ref.current && !ref.current.contains(event.target) && form.current && !form.current.contains(event.target)){
           setCheck(false);
           isActive('');
         }
@@ -16,7 +17,7 @@ function useOutsideAlerter(ref, setCheck, isActive) {
       return () => {
         document.removeEventListener('mousedown', handleClickOutside);
       }
-    }, [ref]
+    }, [ref, form]
   )
 }
 
@@ -25,7 +26,8 @@ const Navbar = (props) => {
   const [check, setCheck] = useState(false);
   const [active, isActive] = useState('');
   const btn = useRef(null);
-  useOutsideAlerter(btn, setCheck, isActive);
+  const form = useRef(null);
+  useOutsideAlerter(btn, form, setCheck, isActive);
 
   const linkList = [
     ['/', 'Logements'],
@@ -44,8 +46,9 @@ const Navbar = (props) => {
   }
 
   return (
-    <div className="navbar">
+    <div className="navbar" >
       <div className="navbar-mobile">
+        <img className="logo" src={logo} alt="logo" width='100' />
         <div className="btn-burger">
           <div className="line"></div>
           <div className="line"></div>
@@ -53,9 +56,10 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className="navbar-top">
+        <Link to='/'><img className="logo" src={logo} alt="logo" width='200' /></Link>
         <button form="connection" type={active.length && check ? 'submit' : ''} ref={btn} className={"connect"+active} onClick={handleButton}>Se connecter</button>
         {
-          check && <Connect/>
+          check && <Connect form={form} isActive={isActive} setCheck={setCheck} check={check}/>
         }
       </div>
       <div className="navbar-bottom">

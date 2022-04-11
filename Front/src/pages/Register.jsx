@@ -5,18 +5,18 @@ import "../Style/register.css";
 const Register = () => {
 
   // Input partie top //
-  const [groupe, setGroupe] = React.useState("");
-  const [nom, setLastname] = React.useState("");
+
+  const [lastname, setLastname] = React.useState("");
   const [day, setDay] = React.useState("");
   const [mouth, setMouth] = React.useState("");
   const [year, setYear] = React.useState("");
-  const [prenom, setFirstname] = React.useState("");
-  const [addresse, setAdresse] = React.useState("");
-  const [code_postal, setZipcode] = React.useState("");
+  const [firstname, setFirstname] = React.useState("");
+  const [adress, setAdresse] = React.useState("");
+  const [zipcode, setZipcode] = React.useState("");
   const [email, setEmail] = React.useState("");
-  const [ville, setCity] = React.useState("");
-  const [mot_de_passe, setPassword] = React.useState("");
-  const [numero_de_telephone, setPhone] = React.useState("");
+  const [city, setCity] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [phone, setPhone] = React.useState("");
 
   // Input partie bottom //
 
@@ -29,11 +29,12 @@ const Register = () => {
   const [typeAgain, setTypeAgain] = React.useState("")
 
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    await fetch("http://localhost:3000/createAccount", {
+    fetch("http://localhost:3467/createAccount", {
       method: "POST",
-      body: JSON.stringify({ nom, prenom, mot_de_passe, email, groupe, numero_de_telephone, ville, code_postal}),
+      headers: {'Content-Type' : 'application/json'},
+      body: JSON.stringify({ lastname, day, mouth, year, firstname, adress, zipcode, email, city, password, phone, asso, cateAsso, adresseAgain, zipcodeAgain, cityAgain, phoneAgain, typeAgain }),
     }).then((res) => console.log(res));
   };
 
@@ -41,40 +42,15 @@ const Register = () => {
   return (
     
     <div className="main">
-      <div className="navbar">
-      <div className="navbar-mobile">
-        <div className="btn-burger">
-          <div className="line"></div>
-          <div className="line"></div>
-          <div className="line"></div>
-        </div>
-      </div>
-      <div className="navbar-top">
-
-      </div>
-      <div className="navbar-bottom">
-        <nav>
-          {/* <ul>
-            {
-              linkList.map(([url, titre], index) => <li key={index}><Link to={url}>{titre}</Link></li> )
-            }
-          </ul> */}
-        </nav>
-      </div>
-    </div>
-      <form className="box_form" id="Form" onSubmit={handleSubmit} method="post">
+      <form className="box_form" id="Form" onSubmit={handleSubmit}>
         <h1 className="title_form">Inscription</h1>
 
         <div className="select_type">
           <div className="box_for_association">
             <input
-              type="radio"
+              type="checkbox"
               id="Association"
               className="input_for_association"
-              value="association"
-              name="box"
-              class="radio"
-              onChange={(e) => setGroupe(e.target.value)}
             ></input>
             <label htmlFor="Association" className="label_for_association">
               Association
@@ -83,13 +59,9 @@ const Register = () => {
 
           <div className="box_for_etudiant">
             <input
-              type="radio"
+              type="checkbox"
               id="Etudiant"
               className="input_for_etudiant"
-              value="etudiant"
-              name="box"
-              class="radio"
-              onChange={(e) => setGroupe(e.target.value)}
             ></input>
             <label htmlFor="Etudiant" className="label_for_etudiant">
               Etudiant
@@ -98,13 +70,9 @@ const Register = () => {
 
           <div className="box_for_professionnel">
             <input
-              type="radio"
+              type="checkbox"
               id="Professionnel"
               className="input_for_professionnel"
-              value="professionnel"
-              name="box"
-              class="radio"
-              onChange={(e) => setGroupe(e.target.value)}
             ></input>
             <label htmlFor="Professionnel" className="label_for_professionnel">
               Professionnel

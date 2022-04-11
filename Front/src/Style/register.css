@@ -6,7 +6,6 @@
     width: 50%;
     height: auto;
     min-width: 600px;
-    z-index: 5;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--light-red);
@@ -15,6 +14,8 @@
 input{
     padding: 5px;
     outline: none;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 0;
 }
 
 .title_form{
@@ -32,6 +33,16 @@ input{
 
 .box_for_top_input, .box_for_input_bot{
     color: white;
+}
+
+.box_for_association, .box_for_etudiant, .box_for_professionnel {
+    padding: 5px 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.input_for_association, .input_for_etudiant, .input_for_professionnel{
+    margin-right: 15px;
 }
 
 .box_name_birthday, .box_phone_password, .box_phone_type_asso{
