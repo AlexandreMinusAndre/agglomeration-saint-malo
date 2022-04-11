@@ -8,7 +8,7 @@ const login = async (email, password) => {
 
     const res = await db('users').where({
         email: email,
-        mot_de_passe: password
+        password: password
       }).select('*');
 
 
