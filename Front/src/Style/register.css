@@ -1,0 +1,128 @@
+/* #root{
+    height: 200vh;
+} */
+
+.box_form{
+    width: 50%;
+    height: auto;
+    min-width: 600px;
+    z-index: 5;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--light-red);
+}
+
+input{
+    padding: 5px;
+    outline: none;
+}
+
+.title_form{
+    text-align: center;
+    color: white;
+}
+
+.select_type{
+    display: flex;
+    justify-content: space-around;
+    height: 10%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.box_for_top_input, .box_for_input_bot{
+    color: white;
+}
+
+.box_name_birthday, .box_phone_password, .box_phone_type_asso{
+    display: flex;
+    width: 95%;
+    margin: 0px auto;
+}
+
+.box_name, .box_zipcode, .box_for_email, .box_for_cityname, .box_for_first_password, .box_phone_number, .box_for_confirm_password, .box_for_name_asso, .box_for_category, .box_birthday, .box_for_phone_again, .box_for_type_asso{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%!important;
+}
+
+.box_birthday, .box_firstname, .box_addresse, .box_addresse_again, .box_zipcode_again, .box_city_again{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.box_zipcode_email, .box_city_password{
+    display: flex;
+    width: 95%;
+    margin: 0px auto;
+}
+
+.box_for_email, .box_for_first_password, .box_confirm_password, .box_for_confirm_password, .box_for_category, .box_for_type_asso{
+    flex: 1;
+}
+
+.input_for_firstname, .input_for_adresse, .input_for_adresse_again, .input_for_zipcode_again, .input_for_city_again{
+    width: 24.5%;
+}
+
+.box_for_input_date{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input_for_day, .input_for_month, .input_for_year{
+    width: 30%;
+}
+
+/* bottom */
+
+.box_name_category{
+    display: flex;
+    width: 95%;
+    margin: 0px auto;
+}
+
+.box_for_name_asso, .box_for_category {
+    display: flex;
+    flex-direction: column;
+}
+
+.box_for_conditions{
+    display: flex;
+    margin: 5% 12%;
+}
+
+.text_for_conditions{
+    margin-left: 1%;
+    margin-bottom: 5%;
+    color: white;
+}
+
+.btn_inscription{
+    display: flex;
+    margin: 5% auto;
+    color: white;
+    padding: 10px 45px;
+    background-color: var(--light-red);
+    border: none;
+}
+/* Espacement des input */
+
+.box_name_birthday, .box_firstname, .box_addresse, .box_zipcode_email, .box_city_password, .box_for_name_asso, .box_addresse_again, .box_zipcode_again, .box_city_again{
+    margin-bottom: 2%;
+}
+
+/* Millieu du formulaire */
+
+.separate_input{
+    width: 91%;
+    margin-left: 2%;
+    border: 0.1rem solid #fff;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
