@@ -4,7 +4,7 @@ const cors = require('cors');
 const res = require('express/lib/response');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const DBPORT = process.env.PGPORT;
+
 
 app.use(express.json());
 app.use(cors());
