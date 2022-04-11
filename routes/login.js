@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
     if(result.length === 0) {
         res.status(404).send('Account not found !')
     } else {
-        const token = jwt.sign(result[0], 'secretKey');
+        const token = jwt.sign(result[0], "secretkey");
 
         res.status(200).send(token);
     }

@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const verifyToken = require('../middleware/verifyToken');
 
-router.post("/", async (req, res) => {
+router.post("/", verifyToken, async (req, res) => {
+
     const bonPlan = require('../models/post');
 
     await bonPlan({

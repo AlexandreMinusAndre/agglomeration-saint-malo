@@ -4,7 +4,10 @@ const res = require('express/lib/response');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const cors = require('cors');
+
 app.use(express.json());
+app.use(cors());
 
 const createAccount = require('../routes/createAccount');
 const login = require('../routes/login');
